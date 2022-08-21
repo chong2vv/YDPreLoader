@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/10387577/YDPreLoader'
+  s.homepage         = 'https://github.com/chong2vv/YDPreLoader'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '10387577' => 'chong2vv@163.com' }
-  s.source           = { :git => 'https://github.com/10387577/YDPreLoader.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/chong2vv/YDPreLoader.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -36,7 +36,5 @@ TODO: Add long description of the pod here.
   #   'YDPreLoader' => ['YDPreLoader/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency "KTVHTTPCache"
 end

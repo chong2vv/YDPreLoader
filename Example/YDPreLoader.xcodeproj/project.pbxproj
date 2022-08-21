@@ -37,7 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		144D9F98BAC9551A9BF7CEBB /* YDPreLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YDPreLoader.podspec; path = ../YDPreLoader.podspec; sourceTree = "<group>"; };
+		144D9F98BAC9551A9BF7CEBB /* YDPreLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDPreLoader.podspec; path = ../YDPreLoader.podspec; sourceTree = "<group>"; };
+		1522557B28B28E9000ED20FC /* YDPreLoaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDPreLoaderModel.h; sourceTree = "<group>"; };
+		1522557C28B28E9000ED20FC /* YDPreLoaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDPreLoaderModel.m; sourceTree = "<group>"; };
+		1522557D28B28EB300ED20FC /* YDPreLoaderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDPreLoaderManager.h; sourceTree = "<group>"; };
+		1522557E28B28EB300ED20FC /* YDPreLoaderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDPreLoaderManager.m; sourceTree = "<group>"; };
 		4666D8B55F96CF7A47B08A91 /* Pods_YDPreLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDPreLoader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D39BB203278A130D211FB5E /* Pods-YDPreLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDPreLoader_Example.release.xcconfig"; path = "Target Support Files/Pods-YDPreLoader_Example/Pods-YDPreLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* YDPreLoader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDPreLoader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,12 +64,12 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7FCDA3E0040C88FFBD6CB13C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7FCDA3E0040C88FFBD6CB13C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		80B44A1F59AF99D5C77B9C10 /* Pods-YDPreLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDPreLoader_Example.debug.xcconfig"; path = "Target Support Files/Pods-YDPreLoader_Example/Pods-YDPreLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		924EA8AF733EC88F04C6C82B /* Pods_YDPreLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDPreLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B060F50E38C3C4B4A45EE65E /* Pods-YDPreLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDPreLoader_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YDPreLoader_Tests/Pods-YDPreLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C4E8125A805D3E5FF4A7895E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C4E8125A805D3E5FF4A7895E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D3C9F69766AFCAC5B103EA7E /* Pods-YDPreLoader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDPreLoader_Tests.release.xcconfig"; path = "Target Support Files/Pods-YDPreLoader_Tests/Pods-YDPreLoader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,9 +99,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1522557528B28E6000ED20FC /* YDPreLoader */ = {
+			isa = PBXGroup;
+			children = (
+				1522557628B28E6000ED20FC /* Classes */,
+				1522557928B28E6000ED20FC /* Assets */,
+			);
+			name = YDPreLoader;
+			path = ../YDPreLoader;
+			sourceTree = "<group>";
+		};
+		1522557628B28E6000ED20FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1522557B28B28E9000ED20FC /* YDPreLoaderModel.h */,
+				1522557C28B28E9000ED20FC /* YDPreLoaderModel.m */,
+				1522557D28B28EB300ED20FC /* YDPreLoaderManager.h */,
+				1522557E28B28EB300ED20FC /* YDPreLoaderManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1522557928B28E6000ED20FC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				1522557528B28E6000ED20FC /* YDPreLoader */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for YDPreLoader */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -193,7 +226,6 @@
 				B060F50E38C3C4B4A45EE65E /* Pods-YDPreLoader_Tests.debug.xcconfig */,
 				D3C9F69766AFCAC5B103EA7E /* Pods-YDPreLoader_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +291,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
