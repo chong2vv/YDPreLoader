@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		144D9F98BAC9551A9BF7CEBB /* YDPreLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDPreLoader.podspec; path = ../YDPreLoader.podspec; sourceTree = "<group>"; };
+		144D9F98BAC9551A9BF7CEBB /* YDPreLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDPreLoader.podspec; path = ../YDPreLoader.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1522557B28B28E9000ED20FC /* YDPreLoaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDPreLoaderModel.h; sourceTree = "<group>"; };
 		1522557C28B28E9000ED20FC /* YDPreLoaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDPreLoaderModel.m; sourceTree = "<group>"; };
 		1522557D28B28EB300ED20FC /* YDPreLoaderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDPreLoaderManager.h; sourceTree = "<group>"; };
@@ -398,10 +398,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YDPreLoader_Example/Pods-YDPreLoader_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/KTVCocoaHTTPServer/KTVCocoaHTTPServer.framework",
+				"${BUILT_PRODUCTS_DIR}/KTVHTTPCache/KTVHTTPCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YDPreLoader/YDPreLoader.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTVCocoaHTTPServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTVHTTPCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YDPreLoader.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <KTVHTTPCache/KTVHTTPCache.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface YDPreLoaderModel : NSObject
+
+/// 加载的URL
+@property (nonatomic, copy, readonly) NSString *url;
+/// 请求URL的Loader
+@property (nonatomic, strong, readonly) KTVHCDataLoader *loader;
+
+- (instancetype)initWithURL: (NSString *)url loader: (KTVHCDataLoader *)loader;
+
 
 @end
 

@@ -10,4 +10,13 @@
 
 @implementation YDPreLoaderModel
 
+- (instancetype)initWithURL:(NSString *)url loader:(KTVHCDataLoader *)loader {
+    if (self = [super init])
+    {
+        _url = url;
+        _loader = loader;
+    }
+    return self;
+}
+
 @end
